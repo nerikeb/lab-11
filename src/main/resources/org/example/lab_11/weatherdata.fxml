@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="494.0" style="-fx-background-color: #d2a985;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab_11.WeatherDataController">
+   <children>
+      <Pane layoutY="2.0" prefHeight="277.0" prefWidth="494.0">
+         <children>
+            <StackPane layoutX="0" layoutY="64.0" prefHeight="132.0" prefWidth="494.0">
+               <ImageView fx:id="imgTime" fitHeight="132.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true" />
+            </StackPane>
+            <StackPane layoutX="0" layoutY="14.0" prefHeight="50.0" prefWidth="494.0">
+               <Label fx:id="lblCity" text="City" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font size="25.0" />
+                  </font>
+               </Label>
+            </StackPane>
+            <Label fx:id="lblHum" layoutX="47.0" layoutY="231.0" text="Humidity" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <StackPane layoutX="0" layoutY="231.0" prefHeight="20.0" prefWidth="494.0">
+               <Label fx:id="lblTemp" text="Temperature" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Label>
+            </StackPane>
+            <Label fx:id="lblPress" layoutX="393.0" layoutY="231.0" text="Pressure" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Pane layoutY="279.0" prefHeight="121.0" prefWidth="494.0">
+         <children>
+            <TextField fx:id="txtCity" layoutX="22.0" layoutY="48.0" promptText="Enter city name" />
+            <Label layoutX="22.0" layoutY="21.0" text="Choose any city:" textFill="WHITE" />
+            <Button fx:id="btnCitySearch" layoutX="195.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnSearchCity" text="Search" />
+            <Button fx:id="btnForecast" layoutX="310.0" layoutY="48.0" mnemonicParsing="false" onAction="#viewForecast" text="Forecast" />
+            <Label fx:id="lblTime" layoutX="22.0" layoutY="83.0" text="Time" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
